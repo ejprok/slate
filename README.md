@@ -1,5 +1,7 @@
 # Slate
 
+[![Pub](https://img.shields.io/pub/v/slate.svg?style=flat-square)](https://pub.dev/packages/slate)
+
 A neumorphic library for Flutter. You can read more about the neumorphism trend [here](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6)
 
 Slate is an alternative to Cards and other floating widgets. Inspired by [neumorphism.io](https://neumorphism.io/)
