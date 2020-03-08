@@ -6,8 +6,11 @@ class Slate extends StatelessWidget {
   final Widget child;
   final Color color;
   final double rounding;
-  Slate({@required this.child, @required this.color, this.rounding})
-      : assert(child != null);
+  Slate({
+    @required this.child,
+    @required this.color,
+    this.rounding,
+  }) : assert(child != null);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class Slate extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: this.color,
-        borderRadius: BorderRadius.all(Radius.circular(this.rounding)),
+        borderRadius: BorderRadius.all(Radius.circular(this.rounding ?? 0)),
         boxShadow: [
           BoxShadow(
               color: lowerShadow,

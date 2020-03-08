@@ -19,38 +19,47 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Column(
+      body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Center(
-            child: Slate(
-              child: Container(
-                width: 100,
-                height: 100,
-                child: Center(
-                  child: Icon(Icons.play_arrow, size: 50),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Slate(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  child: Center(
+                    child: Icon(
+                      Icons.play_arrow,
+                      size: 50,
+                    ),
+                  ),
                 ),
+                color: Colors.blue,
+                rounding: 4,
               ),
-              color: Colors.blue,
-              rounding: 30,
-            ),
+              SizedBox(height: 20),
+              Text("Slate"),
+            ],
           ),
-          Center(
-            child: Card(
-              elevation: 6,
-              clipBehavior: Clip.antiAlias,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Container(
-                width: 100,
-                height: 100,
-                child: Center(
-                  child: Icon(Icons.play_arrow, size: 50),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Card(
+                elevation: 6,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  child: Center(
+                    child: Icon(Icons.play_arrow, size: 50),
+                  ),
                 ),
+                color: Colors.blue,
               ),
-              color: Colors.blue,
-            ),
+              SizedBox(height: 20),
+              Text("Standard Card"),
+            ],
           ),
         ],
       ),
